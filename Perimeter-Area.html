@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter</title>
+    <link rel="stylesheet" href="Perimeter-Area.css">
+</head>
+<body>
+        <div class="row">
+            <div class="column">
+                <img src="square.png" height="200px" class="images">
+                <div>Length of the side:<input type="number" id="square"></div>
+                <div><input type="submit" value="Perimeter" onclick="square()"></div>
+                <div><input type="submit" value="Area" onclick="square2()"></div>
+                <h3>The perimeter of the square is:</h3>
+                <input type="number" name="ans" id="square_answer">
+            </div>
+            <div class="column">
+                <img src="triangle.png" height="200px" class="images">
+                <p>Length of the first side: <input type="number" id="triangle"></p>
+                <p>Length of the second side: <input type="number" id="triangle2"></p>
+                <p>Length of the third side: <input type="number" id="triangle3"></p>
+                <div><input type="submit" value="Perimeter" onclick="triangle()"></div>
+                <h3>The perimeter of the triangle is:</h3>
+                <input type="number" name="ans" id="triangle_answer">
+            </div>
+            <div class="column">
+                <img src="rectangle.png" height="200px" class="images">
+                <p align="center">Length: <input type="number" id="length"></p>
+                <p align="center">Breadth: <input type="number" id="breadth"></p>
+                <div align="center"><input type="submit" value="Perimeter" onclick="rectangle()"></div>
+                <div align="center"><input type="submit" value="Area" onclick="rectangle2()"></div>
+                <h3 align="center">The perimeter of the rectangle is:</h3>
+                <p align="center"><input type="number" name="ans" id="rectangle_answer"></p>
+            </div>
+        </div>
+</body>
+<script src="Perimeter-Area.js"></script>
+</html>
