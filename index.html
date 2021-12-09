@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Perimeter and Area</title>
+    <style>
+      *{
+    font-family: cursive;
+}
+
+.square{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+
+.triangle{
+    background-color: aqua;
+    border-radius: 20px;
+    color: rgb(89, 41, 221);
+}
+
+.rectangle{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+
+#square_answer{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+
+#square_answer_2{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+
+#triangle_answer{
+    background-color: aqua;
+    border-radius: 20px;
+    color: rgb(89, 41, 221);
+}
+
+#rectangle_answer{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+
+#rectangle_answer_2{
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: rgb(58, 131, 15);
+}
+    </style>
+</head>
+<body>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4" id="heading">Perimeter and Area</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Welcome to Perimeter and Area finder program. You can find the perimeter and area of shapes such as rectangle, triangle and square</p>
+            <div class="flex mt-6 justify-center">
+              <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <img src="square.png" alt="">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Square</h2>
+                <p class="leading-relaxed text-base">Square is a regular quadrilateral, which means that it has four equal sides and four equal angles.</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center" href="https://www.merriam-webster.com/dictionary/square" target="_blank">Learn More  
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <h3>Please enter the side of the square: </h3>
+                <input type="number"class="square"id="square">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="square()">
+                  Perimeter and Area
+                </button>
+              </div>
+              <h3>The perimeter of the square is: </h3>
+                <input type="number" id="square_answer">
+                <h3>The area of the square is: </h3>
+                <input type="number" id="square_answer_2">
+            </div>
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <img src="triangle.png" alt="">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Triangle</h2>
+                <p class="leading-relaxed text-base">A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry.</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center" href="https://www.merriam-webster.com/dictionary/triangle" target="_blank">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <h3>Please enter the length of the first side of the triangle: </h3>
+                <input type="number"class="triangle"id="triangle">
+                <h3>Please enter the length of the second side of the triangle: </h3>
+                <input type="number"class="triangle"id="triangle_2">
+                <h3>Please enter the length of the third side of the triangle: </h3>
+                <input type="number"class="triangle"id="triangle_3">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="triangle()">
+                  &nbsp; &nbsp; Perimeter &nbsp; &nbsp;
+                </button>
+              </div>
+              <h3>The perimeter of the triangle is: </h3>
+                <input type="number" id="triangle_answer">
+            </div>
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                <img src="rectangle.png" alt="">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Rectangle</h2>
+                <p class="leading-relaxed text-base">A rectangle has 4 sides and 4 corners.The opposite sides of a rectangle have the same lengths</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center" href="https://www.merriam-webster.com/dictionary/rectangle" target="_blank">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <h3>Please enter the length of the rectangle: </h3>
+                <input type="number"class="rectangle"id="length">
+                <h3>Please enter the breadth of the rectangle: </h3>
+                <input type="number"class="rectangle"id="breadth">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="rectangle()">
+                  Perimeter and Area
+                </button>
+              </div>
+              <h3>The perimeter of the rectangle is: </h3>
+                <input type="number" id="rectangle_answer">
+                <h3>The area of the rectangle is: </h3>
+                <input type="number" id="rectangle_answer_2">
+            </div>
+          </div>
+        </div>
+    </section>
+</body>
+<script>
+  function square() {
+    let side = parseInt(document.getElementById("square").value);
+    document.getElementById("square_answer").value = 4*side;
+    document.getElementById("square_answer_2").value = side*side;
+}
+
+function rectangle() {
+    let length = parseInt(document.getElementById("length").value);
+    let breadth = parseInt(document.getElementById("breadth").value);
+    document.getElementById("rectangle_answer").value = 2*(length+breadth);
+    document.getElementById("rectangle_answer_2").value = length*breadth;
+} 
+
+function triangle() {
+    let triangle = parseInt(document.getElementById("triangle").value);
+    let triangle2 = parseInt(document.getElementById("triangle_2").value);
+    let triangle3 = parseInt(document.getElementById("triangle_3").value);
+    document.getElementById("triangle_answer").value = triangle+triangle2+triangle3;
+}
+</script>
+</html>
